@@ -28,7 +28,6 @@ namespace Caso_3Modelado.FactoryPattern
             () => new Judo()
             };
         }
-     
 
         public override List<IArteMarcial> CreateArteMarcial()
         {

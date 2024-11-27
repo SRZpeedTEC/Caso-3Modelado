@@ -72,7 +72,7 @@
             pictureBox2.BackColor = Color.FromArgb(128, 255, 128);
             pictureBox2.Location = new Point(775, 23);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(610, 514);
+            pictureBox2.Size = new Size(610, 530);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
@@ -325,6 +325,7 @@
             BitacoraP1.Name = "BitacoraP1";
             BitacoraP1.Size = new Size(615, 154);
             BitacoraP1.TabIndex = 38;
+            BitacoraP1.SelectedIndexChanged += BitacoraP1_SelectedIndexChanged;
             // 
             // BitacoraP2
             // 

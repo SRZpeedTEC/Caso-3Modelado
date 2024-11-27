@@ -31,7 +31,6 @@ namespace Caso_3Modelado.Players
             this.vida = vida;
         }
 
-        public void AgregarBitacora() { }
 
         public virtual void Atacar(Player Atacante, Player Contrincante)
         {

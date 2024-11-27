@@ -25,7 +25,7 @@ namespace Caso_3Modelado.StrategyPattern
         public void Tecnica1(Player Atacante, Player Contrincante)
         {
             int dano = DescripcionesGolpes["Tecnica1"].poder;
-            int bonificacionVida = 20;
+            int bonificacionVida = 20;           
             Atacante.setVida(Atacante.getVida() + bonificacionVida);
             Contrincante.setVida(Contrincante.getVida() - dano);
         }

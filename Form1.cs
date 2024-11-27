@@ -60,7 +60,7 @@ namespace Caso_3Modelado
 
         }
 
-        private void inicializarJuego() 
+        private void inicializarJuego()
         {
             Player1.setVida(200);
             Player2.setVida(200);
@@ -107,7 +107,7 @@ namespace Caso_3Modelado
             comboBox.Text = String.Empty;
             comboBox.Items.Clear();
 
-            
+
 
             foreach (var arteMarcial in artesMarciales)
             {
@@ -115,7 +115,7 @@ namespace Caso_3Modelado
             }
         }
 
-        private void ActualizarVidas() 
+        private void ActualizarVidas()
         {
             lblVidaP1.Text = $"Vida: {Players[0].getVida().ToString()} / 200";
             lblVidaP2.Text = $"Vida: {Players[1].getVida().ToString()} / 200";
@@ -123,7 +123,7 @@ namespace Caso_3Modelado
 
         private void ActualizarBitacoras()
         {
-            
+
             foreach (var ataque in Player1.BitacoraAtaques)
             {
                 BitacoraP1.Items.Add($"{turno}: {ataque}");
@@ -205,7 +205,7 @@ namespace Caso_3Modelado
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
+
             Players[0].setArtesMarciales();
             comboBoxOpciones(ComboBoxArtesMarcialP1, Players[0].artesMarciales);
 
@@ -236,7 +236,7 @@ namespace Caso_3Modelado
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
+
             if (ComboBoxArtesMarcialP1.SelectedIndex != -1)
             {
                 Player1.Atacar(Player1, Player2);
@@ -248,7 +248,7 @@ namespace Caso_3Modelado
 
                 if (Player1.getVida() <= 0 || Player2.getVida() <= 0)
                 {
-                    string ganador = Player1.getVida() <= 0 ? "Jugador 2" : "Jugador 1";
+                    string ganador = Player1.getVida() <= Player2.getVida() ? "Jugador 2" : "Jugador 1";
                     MostrarMensajeFinal(ganador);
                 }
             }
@@ -274,6 +274,11 @@ namespace Caso_3Modelado
 
             IArteMarcial arteMarcial = Player1.artesMarciales.FirstOrDefault(a => a.Nombre == arteMarcialSeleccionada);
             Player1.SeleccionarArteMarcial(arteMarcial);
+        }
+
+        private void BitacoraP1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
